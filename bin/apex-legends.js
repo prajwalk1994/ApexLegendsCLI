@@ -10,8 +10,6 @@ program
 program
   .command("stat")
   .description("Check the Stats of Each Player")
-  .option("-P <type>", "Enter the player tag of the platform")
-  .option("--platform <type>", "Platform of the Player (PSN, Origin, Xbox)")
-  .action((opts) => stat.show(opts));
+  .action(stat.show);
 
 program.parse(process.argv);
