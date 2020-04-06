@@ -39,6 +39,9 @@ const stat = {
       ]);
 
       let output = await apexAPI.getStatData(input.platform, input.player);
+      if (output) {
+        console.log(output);
+      }
     } catch (error) {
       console.error(error.message.red);
     }
